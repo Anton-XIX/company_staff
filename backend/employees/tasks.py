@@ -1,5 +1,5 @@
 from celery import shared_task
-from .models import Employee
+from employees.models import Employee
 
 
 @shared_task

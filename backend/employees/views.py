@@ -9,8 +9,7 @@ from django.shortcuts import get_object_or_404
 class EmployeeListCreateView(ListCreateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
-    lookup_field = ['level']
-    filterset_fields = ['level']
+    filterset_fields = ['level', 'position']
     permission_classes = [IsAuthenticated, IsAdmin]
 
 
